@@ -1,0 +1,494 @@
+*{
+    margin: 0%;
+}
+#Fondo1{
+    background-image: url("./img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fondo2{
+    background-color: #dcdcdc;
+}
+/*Estilo para el header*/
+.navbar{
+    position:fixed;
+    display:inline-block;
+    background-color:white;
+    width: 100%;
+    height: 90px;
+    margin-top: 0px;
+    z-index: 1;
+}
+#logo{
+    color: #000;
+    position: fixed;
+    margin-top: 24px;
+    margin-left: 48%;
+    font-family:  "Jost", sans-serif ;
+    z-index: 1;
+}
+#lista{
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    float:right;
+    border-radius: 2px;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+#carrito{
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+#carrito:hover{
+    color: #a4a4a4;
+}
+.search-container {
+  align-items: center;
+  justify-content: center;
+
+}
+
+.buscador {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-left: 120px;
+  margin-top: 27px;
+}
+
+.btn {
+  background-color:rgb(196, 150, 150);
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn i {
+  color: white;
+}
+
+
+/*Estilo para la barra lateral de menu*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    font-family:"Jost", sans-serif  ;
+    margin-left: 25px;
+  }
+  .sidebar a:hover {
+    color: #a4a4a4;
+  }
+  .sidebar .close-btn {
+    position: absolute;
+   top: 12px;
+    right: 25px;
+    font-size: 26px;
+    margin-left: 50px;
+  }
+  .open-btn {
+    font-size: 23px;
+    cursor: pointer;
+    position: fixed;
+    top: 27.3px;
+    left: 28px;
+    z-index: 2;
+  }
+  .open-btn:hover{
+    color: #a4a4a4;
+  }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none;
+  }
+  /*Estilo para la barra lateral del user*/
+  .pantalla {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none;
+  }
+  .userbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0; 
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    font-family: "Jost", sans-serif  ;
+  } 
+  .userbar a {
+    text-decoration: none;
+    font-size: 22px;
+    color:#000000;
+    display: block;
+    transition: 0.3s;
+    margin-left: 35px;
+    margin-top: 300px;
+  }
+  .userbar a:hover {
+    color: #a4a4a4;
+  }
+  .userbar .cierre-user {
+    position: absolute;
+    margin-top: 20px;
+    left: 0px; 
+    font-size: 32px;
+    margin-left: 35px;
+  }
+  .abrir-user {
+    font-size: 17px;
+    cursor: pointer;
+    position: fixed;
+    top: 38px;
+    right: 105px; 
+    z-index: 1;
+  }
+  .abrir-user:hover {
+    color: #a4a4a4;
+  }
+  #perfil{
+    margin-left: 35px;
+    font-size: 22px;
+    margin-top: 80px;
+  }
+#usericono{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 225px;
+    font-size: 30px;
+}
+/*Estilo para la barra lateral de contacto*/
+.pantalla2 {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: none;
+  }
+  .contactobar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0; 
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-left: 25px;
+    font-family: "Jost", sans-serif  ;
+  }
+
+  .contactobar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    margin-left: 25px;
+  }
+  .contactobar a:hover {
+    color:#a4a4a4;
+    z-index: 1;
+  }
+  .contactobar .close-contacto {
+    position: absolute;
+    top: 0;
+    left: 25px; 
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  .open-contacto {
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    top: 33.5px;
+    right: 165px; 
+    z-index: 1;
+    color: #000000; 
+    font-family: "Jost", sans-serif  ;
+  }
+  .open-contacto:hover {
+    color: #7e7e7e;
+    z-index: 1; 
+  }
+  .infocontacto{
+    font-family: "Jost", sans-serif ;
+    margin-left: 50px;
+    margin-top: 100px;
+  }
+  #info{
+    font-family: "Jost", sans-serif ;
+  }
+  /*Estilo para las imagenes y texto de la pagina principal*/
+  #cara{
+    width: 760px;
+    margin-top: 90px;
+    z-index: 1;
+  }
+  #cuadro{
+    width: 713px;
+    margin-top: -740px;
+    margin-left: 760px;
+    size: 700px;
+    height: 680px;
+  }
+  .salto{
+    width: 100%;
+    height: 70px;
+    background: #dcdcdc;
+    margin-top: -22px;
+    align-self: baseline;
+    position: absolute;
+  }
+  #oferta1{
+    width: 400px;
+    height: 530px;
+    margin-left: 100px;
+    font-family:"Jost", sans-serif ;
+    font-size: 20px;
+  }
+  #escultura{
+    width: 360px;
+    height: 450px;
+    padding-bottom: 3px;
+  
+  }
+  #oferta2{
+    width: 400px;
+    height: 530px;
+    margin-left: 564px;
+    font-family:"Jost", sans-serif ;
+    font-size: 20px;
+    margin-top: -480px;
+  }
+  #pintura{
+    width:340px;
+    height: 400px;
+    padding-bottom: 3px;
+  }
+  #oferta3{
+    width: 400px;
+    height: 530px;
+    margin-left: 1010px;
+    font-family:"Jost", sans-serif ;
+    font-size: 20px;
+    margin-top: -530px;
+  }
+  #fotografia{
+    width:360px;
+    height: 400px;
+    padding-bottom: 3px;
+  }
+  #enlace {
+    position: relative; 
+    text-decoration: none;
+    color: #000; 
+    font-family:"Jost", sans-serif ;
+    border-style: none;
+}
+#enlace::after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -3px; 
+    width: 0; 
+    height: 2px; 
+    background-color: #000; 
+    transition: width 0.3s; 
+}
+#enlace:hover::after {
+    width: 100%; 
+}
+#ceramica{
+  width: 100%;
+  height: 770px;
+}
+#promoceramica{
+  position: absolute;
+  font-family: "Jost", sans-serif ;
+  margin-left: 48.5%;
+  margin-top: -135px;
+  text-align: center;
+  font-size: 22px;
+}
+/*Estilo del footer pero tambien cada pagina tiene modificaciones del footer, pq no me quedaba alineado*/
+#footer{
+  width: 100%;
+  height: auto;
+  font-family: "Jost", sans-serif ;
+  font-size: 13px;
+  position: relative;
+  margin-bottom: 0;
+}
+/*Lista que muestra todos los productos de laa 4 paginas por categoria, solo que ya no quise cambiarle el nombre*/
+.listaEsculturas{
+  background-color:#ffffff;
+  width: 1330px;
+  height: 1422px;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 80px;
+  padding-top: 55px;
+}
+/*Apartado que contiene la lista de los productos en el carrito de compra*/
+#cart{
+  position: absolute;
+  margin-top: 140px;
+  width: 86%;
+  height: auto;
+  z-index: 1;
+  background-color: #ffffff;
+  margin-left: 100px;
+  padding-bottom: 30px;
+}
+
+#cartList{
+  font-family: "Jost", sans-serif ;
+  margin-left: 20px;
+}
+/*Estilo de los productos de las 4 paginas, les puse el mismo id para que quedaran casi con el mismo estilo*/
+#producto1{
+  width: 240px;
+  margin-top: 0;
+  margin-left: 44%;
+  position: absolute;
+}
+#productList{
+  display: inline-block;
+  margin-top: px;
+  padding-left: 10px;
+  font-family: "Jost", sans-serif ;
+  margin-left: 69%;
+}
+#descripcion1{
+  font-family: "Jost", sans-serif ;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 260px;
+  height: 250px;
+  margin-left: 18%;
+  margin-top: 14%;
+  text-align: justify;
+}
+#descripcion2{
+  font-family: "Jost", sans-serif ;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 260px;
+  height: 250px;
+  margin-left: 18%;
+  margin-top: 530px;
+  text-align: justify;
+}
+#producto2{
+  width: 240px;
+  margin-top: 530px;
+  margin-left: 44%;
+  position: absolute;
+}
+#descripcion3{
+  font-family: "Jost", sans-serif ;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 260px;
+  height: 250px;
+  margin-left: 18%;
+  margin-top: 855px;
+  text-align: justify;
+}
+#producto3{
+  width: 210px;
+  height: 280px;
+  margin-top: 845px;
+  margin-left: 46%;
+  position: absolute;
+}
+#descripcion4{
+  font-family: "Jost", sans-serif ;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 260px;
+  height: 250px;
+  margin-left: 18%;
+  margin-top: 1183px;
+  text-align: justify;
+}
+#producto4{
+  width: 210px;
+  height: 280px;
+  margin-top: 1183px;
+  margin-left: 46%;
+  position: absolute;
+}
+
+#Productos:hover{
+  color: #a4a4a4;
+}
+
+#botones{
+  position: absolute;
+  margin-top: 140px;
+  width: 86.8%;
+  height: auto;
+  z-index: 1;
+  background-color: #ffffff;
+  margin-left: 100px;
+  padding-bottom: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#contenedorProductos{
+  position: absolute;
+  margin-top: 140px;
+  width: 80%;
+  height: auto;
+  background-color: #ffffff;
+  margin-left: 100px;
+  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-left: 100px;
+}
+
+  

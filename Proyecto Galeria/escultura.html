@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            ARTIE
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styleArt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="Tienda.js"></script>
+        <script src="barraslaterales.js"></script>
+    </head> 
+<body id="fondo2">
+    <header id="var">
+        
+        <div class="navbar">
+            <li id="lista">
+                <a href="carritoCompra.html" onclick="toggleForm()">
+                    <i class='bx bx-cart' id="carrito"></i>
+                </a>
+            </li>
+        </div>
+        <a href="productos.html" id="Productos" style="font-size: 16px; margin-left: 77%; text-decoration: none; font-family: Jost, sans-serif ; position: absolute; margin-top: -26.7px; ">Productos</a></p>
+    </header>
+
+    <h1 id="logo">
+        ARTIE
+      </h1>  
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="inicio.html">Inicio</a>
+        <a href="pinturas.html">Pintura</a>
+        <a href="escultura.html">Escultura</a>
+        <a href="fotografia.html">Fotografia</a>
+        <a href="grabado.html">Grabado</a>
+      </div>
+      <span class="open-btn"onclick="openNav()">&#9776;</span>
+      
+      <div class="pantalla" id="pantalla"></div>
+
+<div class="userbar" id="userbar">
+    <i class="fas fa-user" id="usericono"></i>
+  <a href="javascript:void(0)" class="cierre-user" onclick="closeUser()">&times;</a>
+  <p id="perfil">Perfil</p>
+  <a href="login.html">Cerrar Sesion</a>
+</div>
+
+<span class="abrir-user" onclick="openUser()"><i class="fas fa-user"></i></span>
+
+<div class="pantalla2" id="pantalla2"></div>
+<div class="contactobar" id="contactobar">
+  <a href="javascript:void(0)" class="close-contacto" onclick="closeContacto()">&times;</a>
+  <div class="infocontacto">
+    <p style="font-size: 18px;">
+        Llámenos
+    </p><br>
+    <p>
+        Donde sea que esté, estaremos encantados de atenderle
+    </p><br>
+    <i class='bx bxs-phone'></i><p>+52 9613372298</p><br><br>
+    <i class='bx bx-envelope'></i> <p>galeriaArtie@hotmail.com</p><br><br>
+    <i class='bx bxs-building-house'> </i><p>CDMX Lomas <br>
+         Ave. Prado Norte 525, Col. Lomas de Chapultepec, 11000, CDMX, México</p>
+  </div>
+</div>
+<span class="open-contacto" onclick="openContacto()">Llámenos</span> 
+     <div class="listaEsculturas">
+        <img src="img/El abrazo.jpg" alt="producto11" id="producto1">
+        <li id="productList"></li><br>
+</div>
+<div id="descripcion1">
+Autor: Jorge Marín <br><br>
+Producto: Escultura de bronce <br><br>
+Dimensiones: 220x213x65 cm <br><br>
+Descripcion: En las obras de bronze de Jorge Marín se refleja la frialdad de las emociones en el bronce, así mismo quiere mostrar la expresion corporal como un simbolo universal <br>
+</div>
+<img src="img/bicicleta.png" alt="producto2" id="producto2">
+<div id="descripcion2">
+    Autor: Rodo Padilla <br><br>
+    Producto: Figura de cerámica gres <br><br>
+    Dimensiones: 17x14 cm <br><br>
+    Descripcion: El Doctor en Bici está inspirado en todos los doctores que velan por nuestra salud. Diseño inspirado en formas geométricas y orgánicas. <br>
+    </div>
+<img src="img/cabeza.png" alt="producto3" id="producto3">
+    <div id="descripcion3">
+        Autor: Facundo Lucero <br><br>
+        Producto: Escultura de piedra <br><br>
+        Dimensiones: 24x40x20 cm <br><br>
+        Descripcion: Se plasma la imagen de una cabeza con caracteristicas indigenas y objetos provenientes de la cultura <br>
+        </div>
+<img src="img/pez.png" alt="producto4" id="producto4">
+<div id="descripcion4">
+    Autor: Jesús Barbosa <br><br>
+    Producto: Escultura de madera <br><br>
+    Dimensiones: 145x53cm <br><br>
+    Descripcion: En esta pieza destaca el símbolo de grandeza y libertad que tiene está especie en nuestro mundo siendo el animal más grande se alimenta de uno de los seres más diminutos de nuestros océanos dando la muestra que para grandes sueños se empieza con pequeños y diminutos pasos <br>
+    </div>
+<script>
+    imprimirEsculturas("esculturas");
+</script>
+</body>
+<footer id="footer">
+    <p style="margin-left: 50%; font-size: 20px; margin-top:1630px; position: absolute; padding-bottom: 10px; ">
+        ARTIE
+    </p>
+    <p style="margin-left: 30px; margin-top: 1650px; position: absolute; padding-bottom: 55px; ">
+        <br>
+        AYUDA <br> <br>
+        La informacion en esta sucursal esta disponible: <br>
+        Lunes a Viernes de 10 am- 6 pm y Sábado de 12 am- 4 pm <br> llamándonos al +52 9613372298<br>
+        También puede contactarnos o enviarnos un correo electrónico <br> a la dirección galeriaArtie@hotmail.com
+    </p>
+</footer>
+</html>

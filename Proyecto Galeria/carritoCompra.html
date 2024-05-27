@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            ARTIE
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styleArt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <script src="Tienda.js"></script>
+       <script src="barraslaterales.js"></script>
+    </head> 
+<body id="fondo2">
+    <header id="var">
+        
+        <div class="navbar">
+            <li id="lista">
+                <a href="carritoCompra.html" onclick="toggleForm()">
+                    <i class='bx bx-cart' id="carrito"></i>
+                </a>
+            </li>
+        </div>
+        <a href="productos.html" id="Productos" style="font-size: 16px; margin-left: 77%; text-decoration: none; font-family: Jost, sans-serif ; position: absolute; margin-top: -26.7px; ">Productos</a></p>
+    </header>
+  
+    <h1 id="logo">
+        ARTIE
+      </h1> 
+</div>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="inicio.html">Inicio</a>
+        <a href="pinturas.html">Pintura</a>
+        <a href="escultura.html">Escultura</a>
+        <a href="fotografia.html">Fotografia</a>
+        <a href="grabado.html">Grabado</a>
+      </div>
+      <span class="open-btn"onclick="openNav()">&#9776;</span>
+      
+      <div class="pantalla" id="pantalla"></div>
+
+<div class="userbar" id="userbar">
+    <i class="fas fa-user" id="usericono"></i>
+  <a href="javascript:void(0)" class="cierre-user" onclick="closeUser()">&times;</a>
+  <p id="perfil">Perfil</p>
+  <a href="login.html">Cerrar Sesion</a>
+  
+ 
+</div>
+
+<span class="abrir-user" onclick="openUser()"><i class="fas fa-user"></i></span>
+
+<div class="pantalla2" id="pantalla2"></div>
+<div class="contactobar" id="contactobar">
+  <a href="javascript:void(0)" class="close-contacto" onclick="closeContacto()">&times;</a>
+  <div class="infocontacto">
+    <p style="font-size: 18px;">
+        Llámenos
+    </p><br>
+    <p>
+        Donde sea que esté, estaremos encantados de atenderle
+    </p><br>
+    <i class='bx bxs-phone'></i><p>+52 9613372298</p><br><br>
+    <i class='bx bx-envelope'></i> <p>galeriaArtie@hotmail.com</p><br><br>
+    <i class='bx bxs-building-house'> </i><p>CDMX Lomas <br>
+         Ave. Prado Norte 525, Col. Lomas de Chapultepec, 11000, CDMX, México</p>
+  </div>
+</div>
+<span class="open-contacto" onclick="openContacto()">Llámenos</span> 
+    <div id="cart">
+    <h2 style="font-family: Jost, sans-serif; text-align: center;">Carrito de Compras</h2><br>
+    <ul id="cartList"></ul>
+    <button onclick="clearCart()" id="enlace" style="background: none; border: none; margin-left: 40px;margin-top: 30px; font-size: 15px;">Vaciar Carrito</button> 
+    </div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+
+<script>
+    // Obtener el carrito del localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Función para mostrar los productos en el carrito
+    function displayCart() {
+        let cartList = document.getElementById("cartList");
+        cartList.innerHTML = '';
+        if (cart.length === 0) {
+            cartList.innerHTML = '<li>El carrito se encuentra vacío</li>';
+        } else {
+            cart.forEach((product, index) => {
+                cartList.innerHTML += `<li>${product.name} - $${product.price} x ${product.quantity} <button onclick="removeFromCart(${index})">Quitar</button></li>`;
+            });
+        }
+    }
+
+    // Mostrar productos en el carrito al cargar la página
+    displayCart();
+
+    // Función para quitar un producto del carrito
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
+
+    // Función para vaciar el carrito
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
+</script>
+</body>
+<footer id="footer">
+    <p style="margin-left: 50%; font-size: 20px; bottom: 20px; position: absolute;">
+        ARTIE
+    </p>
+    <p style="margin-left: 30px; bottom: 40px; position: absolute;">
+        AYUDA <br> <br>
+        La informacion en esta sucursal esta disponible: <br>
+        Lunes a Viernes de 10 am- 6 pm y Sábado de 12 am- 4 pm <br> llamándonos al +52 9613372298<br>
+        También puede contactarnos o enviarnos un correo electrónico <br> a la dirección galeriaArtie@hotmail.com
+    </p>
+</footer>
+</html>

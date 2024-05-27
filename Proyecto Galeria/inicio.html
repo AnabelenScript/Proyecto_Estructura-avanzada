@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ARTIE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styleArt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="barraslaterales.js"></script>
+    </head>
+<body id="fondo2">
+    <header id="var">
+        <div class="navbar">
+            <li id="lista">
+                <a href="carritoCompra.html" onclick="toggleForm()">
+                    <i class='bx bx-cart' id="carrito"></i>
+                </a>
+            </li>
+            <div class="container">
+                <input class="buscador" type="text" placeholder="Buscar por nombre">
+                <button class="btn">Buscar</button>
+            </div>
+           <a href="productos.html" id="Productos" style="font-size: 16px; margin-left: 77%; text-decoration: none; font-family: Jost, sans-serif ; position: absolute; margin-top: -26.7px; ">Productos</a></p>
+    </header>
+
+    <h1 id="logo">ARTIE</h1> 
+    <img src="img/head.jpg" alt="cara" id="cara">
+    <img src="img/Kandinsky-4-1.jpg" alt="cuadro" id="cuadro">
+    <div id="productList"></div>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="inicio.html">Inicio</a>
+        <a href="pinturas.html">Pintura</a>
+        <a href="escultura.html">Escultura</a>
+        <a href="fotografia.html">Fotografia</a>
+        <a href="grabado.html">Grabado</a>
+    </div>
+    <span class="open-btn" onclick="openNav()">&#9776;</span>
+
+    <div class="pantalla" id="pantalla"></div>
+
+    <div class="userbar" id="userbar">
+        <i class="fas fa-user" id="usericono"></i>
+        <a href="javascript:void(0)" class="cierre-user" onclick="closeUser()">&times;</a>
+        <p id="perfil">Perfil</p>
+        <a href="login.html">Cerrar Sesion</a>
+    </div>
+
+    <span class="abrir-user" onclick="openUser()"><i class="fas fa-user"></i></span>
+
+    <div class="pantalla2" id="pantalla2"></div>
+    <div class="contactobar" id="contactobar">
+        <a href="javascript:void(0)" class="close-contacto" onclick="closeContacto()">&times;</a>
+        <div class="infocontacto">
+            <p style="font-size: 18px;">Llámenos</p><br>
+            <p>Donde sea que esté, estaremos encantados de atenderle</p><br>
+            <i class='bx bxs-phone'></i><p>+52 9613372298</p><br><br>
+            <i class='bx bx-envelope'></i><p>galeriaArtie@hotmail.com</p><br><br>
+            <i class='bx bxs-building-house'></i><p>CDMX Lomas<br>Ave. Prado Norte 525, Col. Lomas de Chapultepec, 11000, CDMX, México</p>
+        </div>
+    </div>
+
+    <div class="salto"></div>
+    <div id="oferta1">
+        <img src="img/escultura.jpg" alt="escultura" id="escultura">
+        <p>Esculturas en piedra</p><br>
+        <p style="font-size: 17px;"><a href="escultura.html" id="enlace">Compra ahora</a></p>
+    </div>
+    <div id="oferta2">
+        <img src="img/pintura.jpg" alt="pintura" id="pintura">
+        <p>Cuadros</p><br>
+        <p style="font-size: 17px;"><a href="pinturas.html" id="enlace">Compra ahora</a></p>
+    </div>
+
+    <div id="oferta3">
+        <img src="img/fotografia.jpg" alt="fotografia" id="fotografia">
+        <p>Fotografias</p><br>
+        <p style="font-size: 17px;"><a href="fotografia.html" id="enlace">Compra ahora</a></p>
+    </div>
+    <img src="img/ceramica.jpg" alt="ceramica" id="ceramica">
+    <p id="promoceramica">Cerámica <br><br><a href="escultura.html" id="enlace" style="font-size: 18px;">Conoce más</a></p>
+    <span class="open-contacto" onclick="openContacto()">Llámenos</span>
+    <script>
+        class Node {
+    constructor(product) {
+        this.product = product;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null;
+    }
+
+    add(product) {
+        const newNode = new Node(product);
+        if (!this.root) {
+            this.root = newNode;
+        } else {
+            this.insertNode(this.root, newNode);
+        }
+    }
+
+    insertNode(node, newNode) {
+        if (newNode.product.name < node.product.name) {
+            if (!node.left) {
+                node.left = newNode;
+            } else {
+                this.insertNode(node.left, newNode);
+            }
+        } else {
+            if (!node.right) {
+                node.right = newNode;
+            } else {
+                this.insertNode(node.right, newNode);
+            }
+        }
+    }
+
+    inOrder(node, callback) {
+        if (node !== null) {
+            this.inOrder(node.left, callback);
+            callback(node.product);
+            this.inOrder(node.right, callback);
+        }
+    }
+
+    searchByName(node, name, callback) {
+if (node !== null) {
+if (node.product.name === name) {
+    alert(`El producto "${name}" se encuentra en la categoría "${node.product.category}"`);
+    return;
+}
+if (name < node.product.name) {
+    this.searchByName(node.left, name, callback);
+} else {
+    this.searchByName(node.right, name, callback);
+}
+} else {
+alert(`El producto "${name}" no existe.`);
+}
+}
+
+}
+
+let products = [
+    { name: "El abrazo", category: "esculturas", price: 15000 },
+    { name: "Bici Doctor", category: "esculturas", price: 3000 },
+    { name: "Cabeza de Indio", category: "esculturas", price: 28000 },
+    { name: "Azul", category: "esculturas", price: 140000},
+    { name: "Filtro de carbón", category: "pintura", price: 25000 },
+    { name: "Nadadora", category: "pintura", price: 12000 },
+    { name: "Los pasteles", category: "pintura", price: 32000 },
+    { name: "Pop!!!", category: "pintura", price: 15000},
+    { name: "Reflejos marinos", category: "fotografia", price: 5200},
+    { name: "RUN RUN EL NAGUAL SE FUE PA'L NORTE", category: "fotografia", price: 37200},
+    { name: "TOUCAN AU LEVER DU JOUR", category: "fotografia", price: 3890},
+    { name: "PREPARÁNDOSE PARA LA VICTORIA", category: "fotografia", price: 4450},
+    { name: "-312947-", category: "grabado", price: 49800},
+    { name: "TOTEM 1", category: "grabado", price: 67600},
+    { name: "DON'T LOSE A DIAMOND WHILE CHASING GLITTER - SCROOGE MCDUCK", category: "grabado", price: 30500},
+    { name: "UTOPIA", category: "grabado", price: 36500},
+];
+
+// Crear el árbol de búsqueda binaria
+const productTree = new BinarySearchTree();
+products.forEach(product => productTree.add(product));
+
+function searchProduct() {
+    // Obtener el valor del campo de búsqueda
+    let productName = document.querySelector('.buscador').value.trim();
+
+    // Realizar la búsqueda por nombre
+    productTree.searchByName(productTree.root, productName);
+}
+
+// Agregar un evento de clic al botón de búsqueda
+document.querySelector('.btn').addEventListener('click', searchProduct);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+<footer id="footer">
+    <p style="margin-left: 50%; font-size: 20px; bottom: 0;">ARTIE</p>
+    <p style="top: 70px; margin-left: 30px; bottom: 0;">
+        <br>AYUDA <br> <br>
+        La información en esta sucursal está disponible: <br>
+        Lunes a Viernes de 10 am- 6 pm y Sábado de 12 am- 4 pm <br> llamándonos al +52 9613372298<br>
+        También puede contactarnos o enviarnos un correo electrónico <br> a la dirección galeriaArtie@hotmail.com
+    </p>
+</footer>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            ARTIE
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styleArt.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="Tienda.js"></script>
+        <script src="barraslaterales.js"></script>
+    </head> 
+<body id="fondo2">
+    <header id="var">
+        
+        <div class="navbar">
+            <li id="lista">
+                <a href="carritoCompra.html" onclick="toggleForm()">
+                    <i class='bx bx-cart' id="carrito"></i>
+                </a>
+            </li>
+        </div>
+        <a href="productos.html" id="Productos" style="font-size: 16px; margin-left: 77%; text-decoration: none; font-family: Jost, sans-serif ; position: absolute; margin-top: -26.7px; ">Productos</a></p>
+
+    </header>
+    
+    <h1 id="logo">
+        ARTIE
+      </h1>  
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="inicio.html">Inicio</a>
+        <a href="pinturas.html">Pintura</a>
+        <a href="escultura.html">Escultura</a>
+        <a href="fotografia.html">Fotografia</a>
+        <a href="grabado.html">Grabado</a>
+      </div>
+      <span class="open-btn"onclick="openNav()">&#9776;</span>
+      
+      <div class="pantalla" id="pantalla"></div>
+
+<div class="userbar" id="userbar">
+    <i class="fas fa-user" id="usericono"></i>
+  <a href="javascript:void(0)" class="cierre-user" onclick="closeUser()">&times;</a>
+  <p id="perfil">Perfil</p>
+  <a href="login.html">Cerrar Sesion</a>
+</div>
+
+<span class="abrir-user" onclick="openUser()"><i class="fas fa-user"></i></span>
+
+<div class="pantalla2" id="pantalla2"></div>
+<div class="contactobar" id="contactobar">
+  <a href="javascript:void(0)" class="close-contacto" onclick="closeContacto()">&times;</a>
+  <div class="infocontacto">
+    <p style="font-size: 18px;">
+        Llámenos
+    </p><br>
+    <p>
+        Donde sea que esté, estaremos encantados de atenderle
+    </p><br>
+    <i class='bx bxs-phone'></i><p>+52 9613372298</p><br><br>
+    <i class='bx bx-envelope'></i> <p>galeriaArtie@hotmail.com</p><br><br>
+    <i class='bx bxs-building-house'> </i><p>CDMX Lomas <br>
+         Ave. Prado Norte 525, Col. Lomas de Chapultepec, 11000, CDMX, México</p>
+  </div>
+</div>
+<span class="open-contacto" onclick="openContacto()">Llámenos</span> 
+     <div class="listaEsculturas">
+        <img src="img/grabado1.png" alt="producto1" id="producto1" style="width: 260px; margin-left: 43%;">
+        <li id="productList"></li><br>
+</div>
+<div id="descripcion1">
+Autor: Gawel Kowalski <br><br>
+Producto: Serigrafia en papel<br><br>
+Dimensiones:100x70cm <br><br>
+Descripcion: Esta serie de fotos femeninas anónimas está realizada con la técnica del semitono e incluye impresiones firmadas de edición única y trabajos realizados en papel cortado sobre madera. <br>
+</div>
+<img src="img/grabado2.png" alt="producto2" id="producto2" style="margin-left: 44.2%; width: 260px;">
+<div id="descripcion2">
+    Autor: Andrea Benítez <br><br>
+    Producto: Serigrafía en Plástico <br><br>
+    Dimensiones: 48.5x35cm <br><br>
+    Descripcion: En esta pieza se experimento la profundidad y las interferencias visuales a través de la combinación de capas y patrones de líneas para generar composiciones geométricas dando como resultado diferentes efectos ópticos.<br>
+    </div>
+<img src="img/grabado3.png" alt="producto3" id="producto3" style="margin-top: 860px; width: 265px; margin-left: 44%;">
+    <div id="descripcion3">
+        Autor: Monika Mrowiec <br><br>
+        Producto: Impresión digital en aluminio<br><br>
+        Dimensiones: 69x60cm <br><br>
+        Descripcion:Impresión original en acabado de alta gama Dibond. Enmarcado en un marco ornamental dorado. <br>
+        </div>
+<img src="img/grabado4.png" alt="producto4" id="producto4" style="width: 400px; margin-left: 39%;">
+<div id="descripcion4">
+    Autor:  Nino Trindade Nilton  <br><br>
+    Producto: Xilografía en Madera<br><br>
+    Dimensiones: 54.5x105cm <br><br>
+    Descripcion: Representa una utopia de vivencias<br>
+    </div>
+<script>
+    imprimirGrabados("grabado");
+</script>
+</body>
+<footer id="footer">
+    <p style="margin-left: 50%; font-size: 20px; margin-top:1630px; position: absolute; padding-bottom: 10px; ">
+        ARTIE
+    </p>
+    <p style="margin-left: 30px; margin-top: 1650px; position: absolute; padding-bottom: 55px; ">
+        <br>
+        AYUDA <br> <br>
+        La informacion en esta sucursal esta disponible: <br>
+        Lunes a Viernes de 10 am- 6 pm y Sábado de 12 am- 4 pm <br> llamándonos al +52 9613372298<br>
+        También puede contactarnos o enviarnos un correo electrónico <br> a la dirección galeriaArtie@hotmail.com
+    </p>
+</footer>
+</html>
